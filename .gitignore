@@ -1,2 +1,4 @@
 # Prerequisites
+*.idea
+cmake-build-debug
 

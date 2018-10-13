@@ -3,8 +3,8 @@
 
 int main(int argc, char** argv) {
 	int sockfd, n;
-	char servline[MAXLINE - 1];
-	struct sockaddr_in sockaddr;
+	char recvline[MAXLINE - 1];
+	struct sockaddr_in servaddr;
 
 	if (argc != 2) {
 		err_quit("usage: a.out <IPaddress>");
@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 		err_sys("socket error");
 	}
 
-	bzero(&sockaddr, sizeof(sockaddr));
+	bzero(&servaddr, sizeof(sockaddr));
 
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_port = htons(13);
