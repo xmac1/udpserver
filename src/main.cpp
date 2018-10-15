@@ -1,4 +1,3 @@
-#include <iostream>
 #include "../include/unp.h"
 
 int main(int argc, char** argv) {
@@ -14,7 +13,7 @@ int main(int argc, char** argv) {
 		err_sys("socket error");
 	}
 
-	bzero(&servaddr, sizeof(sockaddr));
+	bzero(&servaddr, sizeof(servaddr));
 
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_port = htons(13);
