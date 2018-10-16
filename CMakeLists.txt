@@ -15,5 +15,5 @@ AUX_SOURCE_DIRECTORY(
 set(CMAKE_CXX_STANDARD 17)
 
 #target_link_libraries(udpserver libs/libunp.a)
-add_executable(udpserver src/main.cpp)
+add_executable(intro src/main.cpp)
 
