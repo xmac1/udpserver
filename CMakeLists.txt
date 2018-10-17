@@ -13,7 +13,8 @@ AUX_SOURCE_DIRECTORY(
 )
 
 set(CMAKE_CXX_STANDARD 17)
+SET(EXECUTABLE_OUTPUT_PATH  build)
+SET(LIBRARY_OUTPUT_PATH  libs)
 
-#target_link_libraries(udpserver libs/libunp.a)
-add_executable(intro src/main.cpp)
 
+ADD_SUBDIRECTORY(src/intro)

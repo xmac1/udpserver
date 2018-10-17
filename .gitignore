@@ -2,8 +2,9 @@
 *.idea
 cmake-build-debug
 CMakeFiles
-CMakeCache.txt
-cmake_install.cmake
+CMakeCache.*
+cmake_install.*
 build
 *.cbp
+*.out
 

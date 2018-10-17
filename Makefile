@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,44 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named intro
+# Target rules for targets named srv
 
 # Build rule for target.
-intro: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 intro
-.PHONY : intro
+srv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 srv
+.PHONY : srv
 
 # fast build rule for target.
-intro/fast:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/build
-.PHONY : intro/fast
+srv/fast:
+	$(MAKE) -f src/intro/CMakeFiles/srv.dir/build.make src/intro/CMakeFiles/srv.dir/build
+.PHONY : srv/fast
 
-src/main.o: src/main.cpp.o
+#=============================================================================
+# Target rules for targets named cli
 
-.PHONY : src/main.o
+# Build rule for target.
+cli: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cli
+.PHONY : cli
 
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/intro.dir/build.make CMakeFiles/intro.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+# fast build rule for target.
+cli/fast:
+	$(MAKE) -f src/intro/CMakeFiles/cli.dir/build.make src/intro/CMakeFiles/cli.dir/build
+.PHONY : cli/fast
 
 # Help Target
 help:
@@ -158,10 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... intro"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... srv"
+	@echo "... cli"
 .PHONY : help
 
 
