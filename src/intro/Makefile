@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/xmac/storage/projects/cpp/udpserver
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/intro/CMakeFiles/cli.dir/rule:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/intro/CMakeFiles/cli.dir/rule
+.PHONY : src/intro/CMakeFiles/cli.dir/rule
+
+# Convenience name for target.
+cli: src/intro/CMakeFiles/cli.dir/rule
+
+.PHONY : cli
+
+# fast build rule for target.
+cli/fast:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/cli.dir/build.make src/intro/CMakeFiles/cli.dir/build
+.PHONY : cli/fast
+
+# Convenience name for target.
+src/intro/CMakeFiles/byteorder.dir/rule:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/intro/CMakeFiles/byteorder.dir/rule
+.PHONY : src/intro/CMakeFiles/byteorder.dir/rule
+
+# Convenience name for target.
+byteorder: src/intro/CMakeFiles/byteorder.dir/rule
+
+.PHONY : byteorder
+
+# fast build rule for target.
+byteorder/fast:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/byteorder.dir/build.make src/intro/CMakeFiles/byteorder.dir/build
+.PHONY : byteorder/fast
+
+# Convenience name for target.
 src/intro/CMakeFiles/srv.dir/rule:
 	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/intro/CMakeFiles/srv.dir/rule
 .PHONY : src/intro/CMakeFiles/srv.dir/rule
@@ -126,19 +156,46 @@ srv/fast:
 .PHONY : srv/fast
 
 # Convenience name for target.
-src/intro/CMakeFiles/cli.dir/rule:
-	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/intro/CMakeFiles/cli.dir/rule
-.PHONY : src/intro/CMakeFiles/cli.dir/rule
+src/intro/CMakeFiles/srv1.dir/rule:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/intro/CMakeFiles/srv1.dir/rule
+.PHONY : src/intro/CMakeFiles/srv1.dir/rule
 
 # Convenience name for target.
-cli: src/intro/CMakeFiles/cli.dir/rule
+srv1: src/intro/CMakeFiles/srv1.dir/rule
 
-.PHONY : cli
+.PHONY : srv1
 
 # fast build rule for target.
-cli/fast:
-	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/cli.dir/build.make src/intro/CMakeFiles/cli.dir/build
-.PHONY : cli/fast
+srv1/fast:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/srv1.dir/build.make src/intro/CMakeFiles/srv1.dir/build
+.PHONY : srv1/fast
+
+byteorder.o: byteorder.cpp.o
+
+.PHONY : byteorder.o
+
+# target to build an object file
+byteorder.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/byteorder.dir/build.make src/intro/CMakeFiles/byteorder.dir/byteorder.cpp.o
+.PHONY : byteorder.cpp.o
+
+byteorder.i: byteorder.cpp.i
+
+.PHONY : byteorder.i
+
+# target to preprocess a source file
+byteorder.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/byteorder.dir/build.make src/intro/CMakeFiles/byteorder.dir/byteorder.cpp.i
+.PHONY : byteorder.cpp.i
+
+byteorder.s: byteorder.cpp.s
+
+.PHONY : byteorder.s
+
+# target to generate assembly for a file
+byteorder.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/byteorder.dir/build.make src/intro/CMakeFiles/byteorder.dir/byteorder.cpp.s
+.PHONY : byteorder.cpp.s
 
 daytimetcpcli.o: daytimetcpcli.cpp.o
 
@@ -194,22 +251,57 @@ daytimetcpsrv.cpp.s:
 	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/srv.dir/build.make src/intro/CMakeFiles/srv.dir/daytimetcpsrv.cpp.s
 .PHONY : daytimetcpsrv.cpp.s
 
+daytimetcpsrv1.o: daytimetcpsrv1.cpp.o
+
+.PHONY : daytimetcpsrv1.o
+
+# target to build an object file
+daytimetcpsrv1.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/srv1.dir/build.make src/intro/CMakeFiles/srv1.dir/daytimetcpsrv1.cpp.o
+.PHONY : daytimetcpsrv1.cpp.o
+
+daytimetcpsrv1.i: daytimetcpsrv1.cpp.i
+
+.PHONY : daytimetcpsrv1.i
+
+# target to preprocess a source file
+daytimetcpsrv1.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/srv1.dir/build.make src/intro/CMakeFiles/srv1.dir/daytimetcpsrv1.cpp.i
+.PHONY : daytimetcpsrv1.cpp.i
+
+daytimetcpsrv1.s: daytimetcpsrv1.cpp.s
+
+.PHONY : daytimetcpsrv1.s
+
+# target to generate assembly for a file
+daytimetcpsrv1.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/intro/CMakeFiles/srv1.dir/build.make src/intro/CMakeFiles/srv1.dir/daytimetcpsrv1.cpp.s
+.PHONY : daytimetcpsrv1.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... srv"
 	@echo "... cli"
+	@echo "... byteorder"
+	@echo "... edit_cache"
+	@echo "... srv"
+	@echo "... srv1"
+	@echo "... byteorder.o"
+	@echo "... byteorder.i"
+	@echo "... byteorder.s"
 	@echo "... daytimetcpcli.o"
 	@echo "... daytimetcpcli.i"
 	@echo "... daytimetcpcli.s"
 	@echo "... daytimetcpsrv.o"
 	@echo "... daytimetcpsrv.i"
 	@echo "... daytimetcpsrv.s"
+	@echo "... daytimetcpsrv1.o"
+	@echo "... daytimetcpsrv1.i"
+	@echo "... daytimetcpsrv1.s"
 .PHONY : help
 
 

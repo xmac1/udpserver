@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named srv
+# Target rules for targets named main
 
 # Build rule for target.
-srv: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 srv
-.PHONY : srv
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-srv/fast:
-	$(MAKE) -f src/intro/CMakeFiles/srv.dir/build.make src/intro/CMakeFiles/srv.dir/build
-.PHONY : srv/fast
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 #=============================================================================
 # Target rules for targets named cli
@@ -136,6 +136,124 @@ cli/fast:
 	$(MAKE) -f src/intro/CMakeFiles/cli.dir/build.make src/intro/CMakeFiles/cli.dir/build
 .PHONY : cli/fast
 
+#=============================================================================
+# Target rules for targets named byteorder
+
+# Build rule for target.
+byteorder: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 byteorder
+.PHONY : byteorder
+
+# fast build rule for target.
+byteorder/fast:
+	$(MAKE) -f src/intro/CMakeFiles/byteorder.dir/build.make src/intro/CMakeFiles/byteorder.dir/build
+.PHONY : byteorder/fast
+
+#=============================================================================
+# Target rules for targets named srv
+
+# Build rule for target.
+srv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 srv
+.PHONY : srv
+
+# fast build rule for target.
+srv/fast:
+	$(MAKE) -f src/intro/CMakeFiles/srv.dir/build.make src/intro/CMakeFiles/srv.dir/build
+.PHONY : srv/fast
+
+#=============================================================================
+# Target rules for targets named srv1
+
+# Build rule for target.
+srv1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 srv1
+.PHONY : srv1
+
+# fast build rule for target.
+srv1/fast:
+	$(MAKE) -f src/intro/CMakeFiles/srv1.dir/build.make src/intro/CMakeFiles/srv1.dir/build
+.PHONY : srv1/fast
+
+#=============================================================================
+# Target rules for targets named libfree
+
+# Build rule for target.
+libfree: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libfree
+.PHONY : libfree
+
+# fast build rule for target.
+libfree/fast:
+	$(MAKE) -f libfree/CMakeFiles/libfree.dir/build.make libfree/CMakeFiles/libfree.dir/build
+.PHONY : libfree/fast
+
+#=============================================================================
+# Target rules for targets named libunp
+
+# Build rule for target.
+libunp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libunp
+.PHONY : libunp
+
+# fast build rule for target.
+libunp/fast:
+	$(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/build
+.PHONY : libunp/fast
+
+#=============================================================================
+# Target rules for targets named tcpcli1
+
+# Build rule for target.
+tcpcli1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcpcli1
+.PHONY : tcpcli1
+
+# fast build rule for target.
+tcpcli1/fast:
+	$(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli1.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli1.dir/build
+.PHONY : tcpcli1/fast
+
+#=============================================================================
+# Target rules for targets named tcpsrv1
+
+# Build rule for target.
+tcpsrv1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcpsrv1
+.PHONY : tcpsrv1
+
+# fast build rule for target.
+tcpsrv1/fast:
+	$(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build
+.PHONY : tcpsrv1/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -144,8 +262,18 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... srv"
+	@echo "... main"
 	@echo "... cli"
+	@echo "... byteorder"
+	@echo "... srv"
+	@echo "... srv1"
+	@echo "... libfree"
+	@echo "... libunp"
+	@echo "... tcpcli1"
+	@echo "... tcpsrv1"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

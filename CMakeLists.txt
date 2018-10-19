@@ -14,7 +14,12 @@ AUX_SOURCE_DIRECTORY(
 
 set(CMAKE_CXX_STANDARD 17)
 SET(EXECUTABLE_OUTPUT_PATH  build)
-SET(LIBRARY_OUTPUT_PATH  libs)
+
 
 
 ADD_SUBDIRECTORY(src/intro)
+add_subdirectory(libfree)
+add_subdirectory(libs)
+add_subdirectory(src/tcpcliserv)
+
+add_executable(main main.cpp main.cpp)
