@@ -21,5 +21,9 @@ ADD_SUBDIRECTORY(src/intro)
 add_subdirectory(libfree)
 add_subdirectory(libs)
 add_subdirectory(src/tcpcliserv)
+add_subdirectory(src/udpcliserv)
+add_subdirectory(src/names)
+add_subdirectory(src/sockopt)
 
-add_executable(main main.cpp main.cpp)
+
+add_executable(main main.cpp main.cpp src/names/hostent.cpp src/sockopt/checkopts.cpp)

@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/xmac/storage/projects/cpp/udpserver
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/xmac/Downloads/CLion-2018.2.4/clion-2018.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule
+.PHONY : src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule
+
+# Convenience name for target.
+tcpsrv1: src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule
+
+.PHONY : tcpsrv1
+
+# fast build rule for target.
+tcpsrv1/fast:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build
+.PHONY : tcpsrv1/fast
+
+# Convenience name for target.
 src/tcpcliserv/CMakeFiles/tcpcli1.dir/rule:
 	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/tcpcliserv/CMakeFiles/tcpcli1.dir/rule
 .PHONY : src/tcpcliserv/CMakeFiles/tcpcli1.dir/rule
@@ -126,19 +141,79 @@ tcpcli1/fast:
 .PHONY : tcpcli1/fast
 
 # Convenience name for target.
-src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule:
-	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule
-.PHONY : src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule
+src/tcpcliserv/CMakeFiles/srvselect01.dir/rule:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/tcpcliserv/CMakeFiles/srvselect01.dir/rule
+.PHONY : src/tcpcliserv/CMakeFiles/srvselect01.dir/rule
 
 # Convenience name for target.
-tcpsrv1: src/tcpcliserv/CMakeFiles/tcpsrv1.dir/rule
+srvselect01: src/tcpcliserv/CMakeFiles/srvselect01.dir/rule
 
-.PHONY : tcpsrv1
+.PHONY : srvselect01
 
 # fast build rule for target.
-tcpsrv1/fast:
-	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build
-.PHONY : tcpsrv1/fast
+srvselect01/fast:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/build
+.PHONY : srvselect01/fast
+
+# Convenience name for target.
+src/tcpcliserv/CMakeFiles/tcpsrv04.dir/rule:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/tcpcliserv/CMakeFiles/tcpsrv04.dir/rule
+.PHONY : src/tcpcliserv/CMakeFiles/tcpsrv04.dir/rule
+
+# Convenience name for target.
+tcpsrv04: src/tcpcliserv/CMakeFiles/tcpsrv04.dir/rule
+
+.PHONY : tcpsrv04
+
+# fast build rule for target.
+tcpsrv04/fast:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build
+.PHONY : tcpsrv04/fast
+
+# Convenience name for target.
+src/tcpcliserv/CMakeFiles/tcpcli04.dir/rule:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f CMakeFiles/Makefile2 src/tcpcliserv/CMakeFiles/tcpcli04.dir/rule
+.PHONY : src/tcpcliserv/CMakeFiles/tcpcli04.dir/rule
+
+# Convenience name for target.
+tcpcli04: src/tcpcliserv/CMakeFiles/tcpcli04.dir/rule
+
+.PHONY : tcpcli04
+
+# fast build rule for target.
+tcpcli04/fast:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/build
+.PHONY : tcpcli04/fast
+
+__/nonblock/strclinonb.o: __/nonblock/strclinonb.cpp.o
+
+.PHONY : __/nonblock/strclinonb.o
+
+# target to build an object file
+__/nonblock/strclinonb.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli1.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli1.dir/__/nonblock/strclinonb.cpp.o
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/__/nonblock/strclinonb.cpp.o
+.PHONY : __/nonblock/strclinonb.cpp.o
+
+__/nonblock/strclinonb.i: __/nonblock/strclinonb.cpp.i
+
+.PHONY : __/nonblock/strclinonb.i
+
+# target to preprocess a source file
+__/nonblock/strclinonb.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli1.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli1.dir/__/nonblock/strclinonb.cpp.i
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/__/nonblock/strclinonb.cpp.i
+.PHONY : __/nonblock/strclinonb.cpp.i
+
+__/nonblock/strclinonb.s: __/nonblock/strclinonb.cpp.s
+
+.PHONY : __/nonblock/strclinonb.s
+
+# target to generate assembly for a file
+__/nonblock/strclinonb.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli1.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli1.dir/__/nonblock/strclinonb.cpp.s
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/__/nonblock/strclinonb.cpp.s
+.PHONY : __/nonblock/strclinonb.cpp.s
 
 sigchldwait.o: sigchldwait.cpp.o
 
@@ -167,6 +242,69 @@ sigchldwait.cpp.s:
 	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/sigchldwait.cpp.s
 .PHONY : sigchldwait.cpp.s
 
+sigchldwaitpid.o: sigchldwaitpid.cpp.o
+
+.PHONY : sigchldwaitpid.o
+
+# target to build an object file
+sigchldwaitpid.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/sigchldwaitpid.cpp.o
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/sigchldwaitpid.cpp.o
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/sigchldwaitpid.cpp.o
+.PHONY : sigchldwaitpid.cpp.o
+
+sigchldwaitpid.i: sigchldwaitpid.cpp.i
+
+.PHONY : sigchldwaitpid.i
+
+# target to preprocess a source file
+sigchldwaitpid.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/sigchldwaitpid.cpp.i
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/sigchldwaitpid.cpp.i
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/sigchldwaitpid.cpp.i
+.PHONY : sigchldwaitpid.cpp.i
+
+sigchldwaitpid.s: sigchldwaitpid.cpp.s
+
+.PHONY : sigchldwaitpid.s
+
+# target to generate assembly for a file
+sigchldwaitpid.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/sigchldwaitpid.cpp.s
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/sigchldwaitpid.cpp.s
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/sigchldwaitpid.cpp.s
+.PHONY : sigchldwaitpid.cpp.s
+
+str_echo.o: str_echo.cpp.o
+
+.PHONY : str_echo.o
+
+# target to build an object file
+str_echo.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/str_echo.cpp.o
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/str_echo.cpp.o
+.PHONY : str_echo.cpp.o
+
+str_echo.i: str_echo.cpp.i
+
+.PHONY : str_echo.i
+
+# target to preprocess a source file
+str_echo.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/str_echo.cpp.i
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/str_echo.cpp.i
+.PHONY : str_echo.cpp.i
+
+str_echo.s: str_echo.cpp.s
+
+.PHONY : str_echo.s
+
+# target to generate assembly for a file
+str_echo.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/str_echo.cpp.s
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/str_echo.cpp.s
+.PHONY : str_echo.cpp.s
+
 tcpcli01.o: tcpcli01.cpp.o
 
 .PHONY : tcpcli01.o
@@ -193,6 +331,33 @@ tcpcli01.s: tcpcli01.cpp.s
 tcpcli01.cpp.s:
 	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli1.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli1.dir/tcpcli01.cpp.s
 .PHONY : tcpcli01.cpp.s
+
+tcpcli04.o: tcpcli04.cpp.o
+
+.PHONY : tcpcli04.o
+
+# target to build an object file
+tcpcli04.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/tcpcli04.cpp.o
+.PHONY : tcpcli04.cpp.o
+
+tcpcli04.i: tcpcli04.cpp.i
+
+.PHONY : tcpcli04.i
+
+# target to preprocess a source file
+tcpcli04.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/tcpcli04.cpp.i
+.PHONY : tcpcli04.cpp.i
+
+tcpcli04.s: tcpcli04.cpp.s
+
+.PHONY : tcpcli04.s
+
+# target to generate assembly for a file
+tcpcli04.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/tcpcli04.cpp.s
+.PHONY : tcpcli04.cpp.s
 
 tcpserv01.o: tcpserv01.cpp.o
 
@@ -221,25 +386,100 @@ tcpserv01.cpp.s:
 	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/tcpserv01.cpp.s
 .PHONY : tcpserv01.cpp.s
 
+tcpservselect01.o: tcpservselect01.cpp.o
+
+.PHONY : tcpservselect01.o
+
+# target to build an object file
+tcpservselect01.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/tcpservselect01.cpp.o
+.PHONY : tcpservselect01.cpp.o
+
+tcpservselect01.i: tcpservselect01.cpp.i
+
+.PHONY : tcpservselect01.i
+
+# target to preprocess a source file
+tcpservselect01.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/tcpservselect01.cpp.i
+.PHONY : tcpservselect01.cpp.i
+
+tcpservselect01.s: tcpservselect01.cpp.s
+
+.PHONY : tcpservselect01.s
+
+# target to generate assembly for a file
+tcpservselect01.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/tcpservselect01.cpp.s
+.PHONY : tcpservselect01.cpp.s
+
+tcpsrv04.o: tcpsrv04.cpp.o
+
+.PHONY : tcpsrv04.o
+
+# target to build an object file
+tcpsrv04.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/tcpsrv04.cpp.o
+.PHONY : tcpsrv04.cpp.o
+
+tcpsrv04.i: tcpsrv04.cpp.i
+
+.PHONY : tcpsrv04.i
+
+# target to preprocess a source file
+tcpsrv04.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/tcpsrv04.cpp.i
+.PHONY : tcpsrv04.cpp.i
+
+tcpsrv04.s: tcpsrv04.cpp.s
+
+.PHONY : tcpsrv04.s
+
+# target to generate assembly for a file
+tcpsrv04.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/tcpsrv04.cpp.s
+.PHONY : tcpsrv04.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... tcpcli1"
+	@echo "... edit_cache"
 	@echo "... tcpsrv1"
+	@echo "... tcpcli1"
+	@echo "... srvselect01"
+	@echo "... tcpsrv04"
+	@echo "... tcpcli04"
+	@echo "... __/nonblock/strclinonb.o"
+	@echo "... __/nonblock/strclinonb.i"
+	@echo "... __/nonblock/strclinonb.s"
 	@echo "... sigchldwait.o"
 	@echo "... sigchldwait.i"
 	@echo "... sigchldwait.s"
+	@echo "... sigchldwaitpid.o"
+	@echo "... sigchldwaitpid.i"
+	@echo "... sigchldwaitpid.s"
+	@echo "... str_echo.o"
+	@echo "... str_echo.i"
+	@echo "... str_echo.s"
 	@echo "... tcpcli01.o"
 	@echo "... tcpcli01.i"
 	@echo "... tcpcli01.s"
+	@echo "... tcpcli04.o"
+	@echo "... tcpcli04.i"
+	@echo "... tcpcli04.s"
 	@echo "... tcpserv01.o"
 	@echo "... tcpserv01.i"
 	@echo "... tcpserv01.s"
+	@echo "... tcpservselect01.o"
+	@echo "... tcpservselect01.i"
+	@echo "... tcpservselect01.s"
+	@echo "... tcpsrv04.o"
+	@echo "... tcpsrv04.i"
+	@echo "... tcpsrv04.s"
 .PHONY : help
 
 

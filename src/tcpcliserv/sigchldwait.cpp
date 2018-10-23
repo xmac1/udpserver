@@ -4,12 +4,14 @@
 
 #include "../../include/unp.h"
 
-void sig_chld(int signo) {
-    pid_t  pid;
-    int stat;
 
-    pid = wait(&stat);
-
-    printf("child %d termination\n", pid);
-    return;
-}
+ // can't deal with multi signal using wait func
+//void sig_chld(int signo) {
+//    pid_t  pid;
+//    int stat;
+//
+//    pid = wait(&stat);
+//
+//    printf("child %d termination\n", pid);
+//    return;
+//}

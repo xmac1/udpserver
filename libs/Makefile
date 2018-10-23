@@ -125,6 +125,141 @@ libunp/fast:
 	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/build
 .PHONY : libunp/fast
 
+__/src/udpcliserv/dgcliaddr.o: __/src/udpcliserv/dgcliaddr.cpp.o
+
+.PHONY : __/src/udpcliserv/dgcliaddr.o
+
+# target to build an object file
+__/src/udpcliserv/dgcliaddr.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/__/src/udpcliserv/dgcliaddr.cpp.o
+.PHONY : __/src/udpcliserv/dgcliaddr.cpp.o
+
+__/src/udpcliserv/dgcliaddr.i: __/src/udpcliserv/dgcliaddr.cpp.i
+
+.PHONY : __/src/udpcliserv/dgcliaddr.i
+
+# target to preprocess a source file
+__/src/udpcliserv/dgcliaddr.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/__/src/udpcliserv/dgcliaddr.cpp.i
+.PHONY : __/src/udpcliserv/dgcliaddr.cpp.i
+
+__/src/udpcliserv/dgcliaddr.s: __/src/udpcliserv/dgcliaddr.cpp.s
+
+.PHONY : __/src/udpcliserv/dgcliaddr.s
+
+# target to generate assembly for a file
+__/src/udpcliserv/dgcliaddr.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/__/src/udpcliserv/dgcliaddr.cpp.s
+.PHONY : __/src/udpcliserv/dgcliaddr.cpp.s
+
+connect_timeo.o: connect_timeo.cpp.o
+
+.PHONY : connect_timeo.o
+
+# target to build an object file
+connect_timeo.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/connect_timeo.cpp.o
+.PHONY : connect_timeo.cpp.o
+
+connect_timeo.i: connect_timeo.cpp.i
+
+.PHONY : connect_timeo.i
+
+# target to preprocess a source file
+connect_timeo.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/connect_timeo.cpp.i
+.PHONY : connect_timeo.cpp.i
+
+connect_timeo.s: connect_timeo.cpp.s
+
+.PHONY : connect_timeo.s
+
+# target to generate assembly for a file
+connect_timeo.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/connect_timeo.cpp.s
+.PHONY : connect_timeo.cpp.s
+
+dg_cli.o: dg_cli.cpp.o
+
+.PHONY : dg_cli.o
+
+# target to build an object file
+dg_cli.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/dg_cli.cpp.o
+.PHONY : dg_cli.cpp.o
+
+dg_cli.i: dg_cli.cpp.i
+
+.PHONY : dg_cli.i
+
+# target to preprocess a source file
+dg_cli.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/dg_cli.cpp.i
+.PHONY : dg_cli.cpp.i
+
+dg_cli.s: dg_cli.cpp.s
+
+.PHONY : dg_cli.s
+
+# target to generate assembly for a file
+dg_cli.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/dg_cli.cpp.s
+.PHONY : dg_cli.cpp.s
+
+dg_echo.o: dg_echo.cpp.o
+
+.PHONY : dg_echo.o
+
+# target to build an object file
+dg_echo.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/dg_echo.cpp.o
+.PHONY : dg_echo.cpp.o
+
+dg_echo.i: dg_echo.cpp.i
+
+.PHONY : dg_echo.i
+
+# target to preprocess a source file
+dg_echo.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/dg_echo.cpp.i
+.PHONY : dg_echo.cpp.i
+
+dg_echo.s: dg_echo.cpp.s
+
+.PHONY : dg_echo.s
+
+# target to generate assembly for a file
+dg_echo.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/dg_echo.cpp.s
+.PHONY : dg_echo.cpp.s
+
+gf_time.o: gf_time.cpp.o
+
+.PHONY : gf_time.o
+
+# target to build an object file
+gf_time.cpp.o:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/gf_time.cpp.o
+.PHONY : gf_time.cpp.o
+
+gf_time.i: gf_time.cpp.i
+
+.PHONY : gf_time.i
+
+# target to preprocess a source file
+gf_time.cpp.i:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/gf_time.cpp.i
+.PHONY : gf_time.cpp.i
+
+gf_time.s: gf_time.cpp.s
+
+.PHONY : gf_time.s
+
+# target to generate assembly for a file
+gf_time.cpp.s:
+	cd /home/xmac/storage/projects/cpp/udpserver && $(MAKE) -f libs/CMakeFiles/libunp.dir/build.make libs/CMakeFiles/libunp.dir/gf_time.cpp.s
+.PHONY : gf_time.cpp.s
+
 readline.o: readline.cpp.o
 
 .PHONY : readline.o
@@ -323,6 +458,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... libunp"
+	@echo "... __/src/udpcliserv/dgcliaddr.o"
+	@echo "... __/src/udpcliserv/dgcliaddr.i"
+	@echo "... __/src/udpcliserv/dgcliaddr.s"
+	@echo "... connect_timeo.o"
+	@echo "... connect_timeo.i"
+	@echo "... connect_timeo.s"
+	@echo "... dg_cli.o"
+	@echo "... dg_cli.i"
+	@echo "... dg_cli.s"
+	@echo "... dg_echo.o"
+	@echo "... dg_echo.i"
+	@echo "... dg_echo.s"
+	@echo "... gf_time.o"
+	@echo "... gf_time.i"
+	@echo "... gf_time.s"
 	@echo "... readline.o"
 	@echo "... readline.i"
 	@echo "... readline.s"

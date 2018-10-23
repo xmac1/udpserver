@@ -202,6 +202,19 @@ libunp/fast:
 .PHONY : libunp/fast
 
 #=============================================================================
+# Target rules for targets named tcpsrv1
+
+# Build rule for target.
+tcpsrv1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcpsrv1
+.PHONY : tcpsrv1
+
+# fast build rule for target.
+tcpsrv1/fast:
+	$(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build
+.PHONY : tcpsrv1/fast
+
+#=============================================================================
 # Target rules for targets named tcpcli1
 
 # Build rule for target.
@@ -215,17 +228,108 @@ tcpcli1/fast:
 .PHONY : tcpcli1/fast
 
 #=============================================================================
-# Target rules for targets named tcpsrv1
+# Target rules for targets named srvselect01
 
 # Build rule for target.
-tcpsrv1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tcpsrv1
-.PHONY : tcpsrv1
+srvselect01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 srvselect01
+.PHONY : srvselect01
 
 # fast build rule for target.
-tcpsrv1/fast:
-	$(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv1.dir/build
-.PHONY : tcpsrv1/fast
+srvselect01/fast:
+	$(MAKE) -f src/tcpcliserv/CMakeFiles/srvselect01.dir/build.make src/tcpcliserv/CMakeFiles/srvselect01.dir/build
+.PHONY : srvselect01/fast
+
+#=============================================================================
+# Target rules for targets named tcpsrv04
+
+# Build rule for target.
+tcpsrv04: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcpsrv04
+.PHONY : tcpsrv04
+
+# fast build rule for target.
+tcpsrv04/fast:
+	$(MAKE) -f src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build.make src/tcpcliserv/CMakeFiles/tcpsrv04.dir/build
+.PHONY : tcpsrv04/fast
+
+#=============================================================================
+# Target rules for targets named tcpcli04
+
+# Build rule for target.
+tcpcli04: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tcpcli04
+.PHONY : tcpcli04
+
+# fast build rule for target.
+tcpcli04/fast:
+	$(MAKE) -f src/tcpcliserv/CMakeFiles/tcpcli04.dir/build.make src/tcpcliserv/CMakeFiles/tcpcli04.dir/build
+.PHONY : tcpcli04/fast
+
+#=============================================================================
+# Target rules for targets named udpcli01
+
+# Build rule for target.
+udpcli01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 udpcli01
+.PHONY : udpcli01
+
+# fast build rule for target.
+udpcli01/fast:
+	$(MAKE) -f src/udpcliserv/CMakeFiles/udpcli01.dir/build.make src/udpcliserv/CMakeFiles/udpcli01.dir/build
+.PHONY : udpcli01/fast
+
+#=============================================================================
+# Target rules for targets named udpserv01
+
+# Build rule for target.
+udpserv01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 udpserv01
+.PHONY : udpserv01
+
+# fast build rule for target.
+udpserv01/fast:
+	$(MAKE) -f src/udpcliserv/CMakeFiles/udpserv01.dir/build.make src/udpcliserv/CMakeFiles/udpserv01.dir/build
+.PHONY : udpserv01/fast
+
+#=============================================================================
+# Target rules for targets named daytimetcpcli1
+
+# Build rule for target.
+daytimetcpcli1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 daytimetcpcli1
+.PHONY : daytimetcpcli1
+
+# fast build rule for target.
+daytimetcpcli1/fast:
+	$(MAKE) -f src/names/CMakeFiles/daytimetcpcli1.dir/build.make src/names/CMakeFiles/daytimetcpcli1.dir/build
+.PHONY : daytimetcpcli1/fast
+
+#=============================================================================
+# Target rules for targets named hostent
+
+# Build rule for target.
+hostent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hostent
+.PHONY : hostent
+
+# fast build rule for target.
+hostent/fast:
+	$(MAKE) -f src/names/CMakeFiles/hostent.dir/build.make src/names/CMakeFiles/hostent.dir/build
+.PHONY : hostent/fast
+
+#=============================================================================
+# Target rules for targets named checkopts
+
+# Build rule for target.
+checkopts: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 checkopts
+.PHONY : checkopts
+
+# fast build rule for target.
+checkopts/fast:
+	$(MAKE) -f src/sockopt/CMakeFiles/checkopts.dir/build.make src/sockopt/CMakeFiles/checkopts.dir/build
+.PHONY : checkopts/fast
 
 main.o: main.cpp.o
 
@@ -254,6 +358,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/names/hostent.o: src/names/hostent.cpp.o
+
+.PHONY : src/names/hostent.o
+
+# target to build an object file
+src/names/hostent.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/names/hostent.cpp.o
+.PHONY : src/names/hostent.cpp.o
+
+src/names/hostent.i: src/names/hostent.cpp.i
+
+.PHONY : src/names/hostent.i
+
+# target to preprocess a source file
+src/names/hostent.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/names/hostent.cpp.i
+.PHONY : src/names/hostent.cpp.i
+
+src/names/hostent.s: src/names/hostent.cpp.s
+
+.PHONY : src/names/hostent.s
+
+# target to generate assembly for a file
+src/names/hostent.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/names/hostent.cpp.s
+.PHONY : src/names/hostent.cpp.s
+
+src/sockopt/checkopts.o: src/sockopt/checkopts.cpp.o
+
+.PHONY : src/sockopt/checkopts.o
+
+# target to build an object file
+src/sockopt/checkopts.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sockopt/checkopts.cpp.o
+.PHONY : src/sockopt/checkopts.cpp.o
+
+src/sockopt/checkopts.i: src/sockopt/checkopts.cpp.i
+
+.PHONY : src/sockopt/checkopts.i
+
+# target to preprocess a source file
+src/sockopt/checkopts.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sockopt/checkopts.cpp.i
+.PHONY : src/sockopt/checkopts.cpp.i
+
+src/sockopt/checkopts.s: src/sockopt/checkopts.cpp.s
+
+.PHONY : src/sockopt/checkopts.s
+
+# target to generate assembly for a file
+src/sockopt/checkopts.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sockopt/checkopts.cpp.s
+.PHONY : src/sockopt/checkopts.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -269,11 +427,25 @@ help:
 	@echo "... srv1"
 	@echo "... libfree"
 	@echo "... libunp"
-	@echo "... tcpcli1"
 	@echo "... tcpsrv1"
+	@echo "... tcpcli1"
+	@echo "... srvselect01"
+	@echo "... tcpsrv04"
+	@echo "... tcpcli04"
+	@echo "... udpcli01"
+	@echo "... udpserv01"
+	@echo "... daytimetcpcli1"
+	@echo "... hostent"
+	@echo "... checkopts"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/names/hostent.o"
+	@echo "... src/names/hostent.i"
+	@echo "... src/names/hostent.s"
+	@echo "... src/sockopt/checkopts.o"
+	@echo "... src/sockopt/checkopts.i"
+	@echo "... src/sockopt/checkopts.s"
 .PHONY : help
 
 
